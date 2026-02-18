@@ -44,7 +44,7 @@ fvs-monitor/
 └── logs/               # Carpeta para logs
 ```
 
-##Autor
+## Autor
 
 **Jose Alejandro**  
 Foxconn México · Proyecto personal para portafolio
