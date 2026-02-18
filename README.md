@@ -1,6 +1,6 @@
-# 📊 FVS Monitor PRO
+# FVS Monitor
 
-**FVS Monitor PRO** es una solución de alto rendimiento para el monitoreo en tiempo real de estaciones de prueba industriales. Diseñado para leer logs en formato CSV generados por equipos de manufactura, procesarlos concurrentemente y presentar estadísticas de rendimiento (Yield, Top Fallas) en una interfaz web moderna.
+**FVS Monitor** es una solucion de alto rendimiento para el monitoreo en tiempo real de estaciones de prueba industriales. Diseñado para leer logs generados por equipos de manufactura, procesarlos concurrentemente y presentar estadisticas de rendimiento (Yield, Top Fallas) en una interfaz web moderna.
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
 ![Flask](https://img.shields.io/badge/Framework-Flask-green)
