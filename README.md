@@ -1,50 +1,41 @@
 # FVS Monitor
 
-**FVS Monitor** es una solucion de alto rendimiento para el monitoreo en tiempo real de estaciones de prueba industriales. Diseñado para leer logs generados por equipos de manufactura, procesarlos concurrentemente y presentar estadisticas de rendimiento (Yield, Top Fallas) en una interfaz web moderna.
+Aplicación web para el monitoreo en tiempo real de estaciones de prueba industriales. Lee los logs generados por los equipos de manufactura, los procesa de forma concurrente y presenta estadísticas de rendimiento en una interfaz web.
 
-![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
-![Flask](https://img.shields.io/badge/Framework-Flask-green)
-![Server](https://img.shields.io/badge/Server-Waitress-red)
-![Status](https://img.shields.io/badge/Status-Production-success)
+## Características
 
-## 🚀 Funcionalidades
+- Monitoreo en tiempo real, con actualización automática cada 3 segundos.
+- Procesamiento concurrente mediante `ThreadPoolExecutor` (20 hilos) y servidor WSGI Waitress, para atender varias rutas de logs y usuarios al mismo tiempo.
+- Lectura por copia temporal, que permite leer archivos que otro proceso está escribiendo sin interferir en el proceso.
+- Trazabilidad histórica: buscador para rastrear el historial de un número de serie en los últimos 7 días.
+- Estadísticas de calidad: cálculo automático de yield (Pass/Fail), top 10 de fallas más frecuentes y detección de rachas de fallas consecutivas.
+- Interfaz con tema oscuro y notificaciones tipo toast para las alertas.
 
--   **Monitoreo en Tiempo Real:** Actualizacion automatica cada 3 segundos.
--   **Alto Rendimiento (Multi-Hilo):** Utiliza `ThreadPoolExecutor` (20 hilos) y servidor WSGI `Waitress` para manejar multiples rutas de logs y usuarios simultaneos.
--   **Lectura "Snapshot" Segura:** Implementa un sistema de copias temporales para leer archivos que estan siendo escritos activamente por otros procesos.
--   **Trazabilidad Historica:** Buscador integrado para rastrear el historial de un numero de serie en los ultimos 7 días.
--   **Estadísticas de Calidad:**
-    -   Calculo automatico de Yield (Pass/Fail).
-    -   Top 10 de fallas mas recurrentes.
-    -   Deteccion de "Racha de Fallas" consecutivas.
--   **Interfaz** Tema oscuro, notificaciones "Toast" para alertas.
-
-## 📷 Interfaz
-<img width="1343" height="624" alt="image" src="https://github.com/user-attachments/assets/a341b43c-41d9-4e8a-b332-4130fa7e2b7d" />
-
-<img width="1233" height="539" alt="image" src="https://github.com/user-attachments/assets/914579ad-9832-413f-85a2-be80fe91a271" />
-
-
-## 🧰 Requisitos
+## Requisitos
 
 - Windows 10 o superior.
-- Acceso a las rutas de red establecidas en `modelo.ini`.
+- Acceso a las rutas de red definidas en `rutas.ini`.
 
-
-## 📂 Estructura del Proyecto
+## Estructura del proyecto
 
 ```text
 fvs-monitor/
 ├── server.exe          # servidor y worker
-├── rutas.ini           # Configuracion de carpetas a monitorear
-├── requirements.txt    # Dependencias del proyecto
-├── static/             # Archivos CSS y JS locales
+├── rutas.ini           # rutas de red a monitorear
+├── requirements.txt    # dependencias del proyecto
+├── static/             # archivos CSS y JS locales
 │   ├── css/
 │   └── js/
-└── logs/               # Carpeta para logs
+└── logs/               # carpeta para logs
 ```
+
+## Interfaz
+
+![Vista principal](https://github.com/user-attachments/assets/a341b43c-41d9-4e8a-b332-4130fa7e2b7d)
+
+![Estadísticas de calidad](https://github.com/user-attachments/assets/914579ad-9832-413f-85a2-be80fe91a271)
 
 ## Autor
 
-**Jose Alejandro**  
-Foxconn México · Proyecto personal para portafolio
+Alejandro Espinoza
+Foxconn México
