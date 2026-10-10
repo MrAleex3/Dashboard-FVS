@@ -2,6 +2,11 @@
 
 Aplicación web para el monitoreo en tiempo real de estaciones de prueba industriales. Lee los logs generados por los equipos de manufactura, los procesa de forma concurrente y presenta estadísticas de rendimiento en una interfaz web.
 
+![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
+![Flask](https://img.shields.io/badge/Framework-Flask-green)
+![Server](https://img.shields.io/badge/Server-Waitress-red)
+![Status](https://img.shields.io/badge/Status-Production-success)
+
 ## Características
 
 - Monitoreo en tiempo real, con actualización automática cada 3 segundos.
